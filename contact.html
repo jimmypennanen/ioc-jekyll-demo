@@ -1,0 +1,20 @@
+---
+layout: default
+title: aboutpage
+contact:
+ - title: Hey, look at me!
+   description: exiting things are happening Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum quis perspiciatis temporibus architecto vel dignissimos voluptatem quasi provident facere ipsa laborum obcaecati maxime asperiores veniam quod, iste quos distinctio!
+ - title: I think I'm getting it!
+   description: I really hope  this is gonna work when i press save and uppdate... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde in fugiat facilis sequi animi libero incidunt nulla cupiditate consequuntur, sit ad id vitae atque consequatur, sapiente ducimus molestiae accusamus? Illum?
+ - title: Look at that!!!
+   description: I'm learning to code with jekyll :) :) :) Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut commodi, ullam qui architecto deserunt temporibus quos sequi eligendi, eum perspiciatis officiis optio, libero dicta voluptatibus quas! Magnam quam pariatur alias! 
+---
+
+<section class="grid-spaceBetween">
+    {% for item in page.contact %}
+    <div class="col-3 padded-2">
+      <h2> {{item.title}} </h2>
+      <p> {{item.description}} </p>
+    </div>
+    {% endfor %}
+</section>

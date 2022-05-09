@@ -1,0 +1,41 @@
+---
+layout: default
+title: aboutpage
+news:
+ - title: big sale
+   description: exiting things are happening
+   date: 13th jan
+   category: promo 
+   url: https://www.sale.com
+ - title: birthday
+   description: pennanen turns 35
+   date: 4th april
+   category: party 
+   url: https://www.sale.com
+ - title: another birthday!
+   description: Pabben turns 32 !!!
+   date: 22nd march
+   category: cake 
+   url: https://www.sale.com  
+---
+
+<h1>Welcome to your {{page.title}} !</h1>
+
+<section class="grid-spaceBetween padded bg-featured latest-news">
+      <!-- First Card   -->
+      {% for item in page.news %}
+     <div class="col-4_xs-8">
+        <div class="card">
+          <div class="bg-image">
+            <span> {{item.category}} </span>  
+          </div> 
+         <div class="post-info"> 
+            <p class="date"> {{ite.date}} </p> 
+            <h3> {{item.title}} </h3> 
+            <p> {{item.description}} </p> 
+            <a href="{{item.url}}"> Find out more &nbsp; &#10141;</a>
+         </div>
+        </div>
+    </div>
+    {% endfor %}
+</section> 

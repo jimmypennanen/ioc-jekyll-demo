@@ -1,5 +1,23 @@
 ---
 layout: default
-title: Homepage
+title: fruit page
+fruit:
+ - title: Mango
+   description: the best fruit
+ - title: Strawberry
+   description: the best berry
+ - title: Pineapple
+   description: also the best fruit 
+ - title: Rasberry
+   description: a really good berry  
 ---
-<h1>Welcome to your homepage!</h1>
+<h1>Welcome to your {{page.title}} !</h1>
+<section>
+    {% for item in page.fruit %}
+    <div class="card">
+        <h2> {{item.title}} </h2>
+        <p> {{item.description}} </p>
+    </div>
+    {% endfor %}
+</section>
+
